@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carpenters</title>
+	<meta charset="UTF8">
+  <meta name="viewport" content="width=devices-width,initial-scale=1.0">
+  <meta http-equip="X-UA-Compaitable" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<style type="text/css">
+  .float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:100px;
+  right:40px;
+  background-color:#0C9;
+  border-color: blanchedalmond;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
+.float:hover{
+background-color: black;
+color: white;
+transition: 0.6s ease;
+opacity: 0.9;
+  }
+
+
+
+
+  .round-btn {display: inline;height: 40px; width: 40px; background:#fff;border-radius: 50%;float: left;margin: 15px 8px;box-shadow: 2px 2px 5px 0px rgb(82, 0, 67);border: 1px solid;/*border: 1px solid #622657;*/}
+.round-btn a {display: block !important;padding: 7px 12px;font-size: 18px;border-radius: 50%;}
+.round-btn .icon {padding: 3px;}
+.round-btn .icon img{height: 24px; width: 32px;margin-top: 6px;}
+.btn-facebook a {color: #3b5998;padding: 8px 13px;}
+.btn-linkedin a {color: #007bb6;}
+.btn-twitter a{color: #1c9deb;}
+.btn-instagram a{color: #dd3f5c;}
+.btn-whatsapp a{color: #155E54;}
+.btn-envelop a{color: #D6403A;font-size: 15px; padding: 9px 12px;}
+.standard_header .standard_social_links {margin-left: 1rem;}
+
+  /*
+  =========================================================================================
+                                    footer
+  =========================================================================================
+  */
+  
+  .footer-wrap {
+    padding-top: 43px;
+    background-size: cover;
+}
+
+.footer-wrap h3 {
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.footer-wrap p {
+    font-size: 13px;
+    line-height: 24px;
+    color: #b3b3b3;
+    margin-top: 15px;
+}
+
+.footer-wrap p a {
+    color: #fff;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.footer-wrap p a:hover {
+    text-decoration: none;
+    color: #ff7800;
+}
+
+.footer-links li a {
+    font-size: 13px;
+    line-height: 30px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+.footer-links li:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    color: #ccc;
+}
+
+.footer-category li a {
+    font-size: 13px;
+    line-height: 30px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-category li:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    padding-right: 10px;
+    color: #b3b3b3;
+}
+
+.address {
+    
+    color: #b3b3b3;
+    font-size: 14px;
+    position: relative;
+    padding-left: 30px;
+    line-height: 30px;
+}
+
+.address:before {
+    content: "\f277";
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info a {
+ 
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
+
+.info a {
+
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.fa-fax:before {
+    content: "\f1ac";
+}
+
+.copyright {
+    border-top: 1px solid #111;
+    font-size: 14px;
+    color: #ccc;
+    padding-top: 15px;
+    text-align: center;
+    padding-bottom: 15px;
+    background: #222;
+}
+footer .second_class{
+    border-bottom: 1px solid #444;
+    padding-bottom: 25px;
+}
+footer .first_class {
+    padding-bottom: 21px;
+    border-bottom: 1px solid #444;
+}
+footer .first_class p, footer .first_class h3{
+    margin: 0 0;
+    
+}
+footer{
+    background: #333;
+}
+
+footer .newsletter input[type="text"] {
+    width: 100%;
+    background: #fff;
+    color: #333;
+    border: 1px solid #222;
+    padding: 14px 20px;
+    border-radius: 50px;
+    margin-top: 12px;
+}
+
+.newsletter .newsletter_submit_btn {
+    background: #fff;
+    position: absolute;
+    right: 30px;
+    border: 0;
+    top: 26px;
+    font-size: 17px;
+    color: #333;
+}
+
+
+footer .second_class_bdr{
+    padding-top: 25px;
+    border-top:1px solid #222;
+}
+
+footer .btn-facebook a {
+    padding: 6px 14px !important;
+}
+
+footer .btn-envelop a {
+    color: #D6403A;
+    font-size: 15px;
+    padding: 12px 12px;
+}
+
+footer .round-btn a {
+    padding: 6px 12px;
+}
+
+footer .round-btn {
+    box-shadow: 2px 2px 5px 0px #222 !important;}
+
+footer .round-btn {
+    margin: 15px 4px;}
+  
+footer dl, ol, ul {
+    padding-left: 5px;
+}
+  footer li{
+    list-style: none;
+  }
+
+@media(max-width:768px){
+    .footer-wrap h3 {
+    margin-top: 27px;}
+    
+    footer .round-btn {
+    margin: 15px 4px;}
+}
+@media(max-width:320px){
+.copyright {
+    font-size: 13px;}
+} 
+
+
+
+
+.nav-item{
+    justify-content: center;
+    padding-left: 20px;
+    margin-top: 5px;}
+    #myProgress {
+  width: 100%;
+  background-color: #ddd;
+  height: 10px;
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  background-color: #4CAF50;
+}
+.a:hover {
+ color:orange;
+}
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.b:hover{
+  opacity: 0.5;
+}
+.section-title {
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 8px;
+}
+  .card:hover{
+background-color: beige;
+color: white;
+transition: 0.6s ease;
+
+  }
+  .card-title:hover{
+    color: cadetblue;
+  }
+</style>
+
+</head>
+<body>
+<div class="NavbarS fixed-top">
+<div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="20" aria-valuemax="100" id="myProgress">
+  <div id="myBar"></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light" style="justify-content: center; background-color: white;">
+  <div class="container">
+  <img src="lo.png" style="max-height: 100px; float: left;">
+  <a class="navbar-brand" href="#" style="font-family: fantasy; font-size: xx-large; margin-left: 20px; color: cadetblue; ">Serverelax</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: 5px;">
+    <ul class="navbar-nav mr-auto"style="color: #666666;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    padding: 0px 20px;
+    justify-content: center;">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color: #00b076;font-weight: bold;">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Service
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="font-size: 20px;"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="font-size: 20px;"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+</nav>
+<script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+</script>
+</div>
+<!-- header-top-area-End -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid" style="background: #f8f8f8;">
+  <div class="container">
+     <img src="h4.png" class="text-center" style="opacity: 0.11; width: 122px;height: 113px; position:absolute; display: block; margin-left: 33%;">
+    <br>
+    <br>
+    <h2 class="text-center"  style="color: darkorange;font-size: 30px;">Carpenters</h2>  <!-- Course Heading -->
+    <br>
+    <br>
+<div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="cp1.jpg" alt="Suresh Dasari Card" style="height:260px; width: 100%;">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-family: none;color: teal;">Shivhare Furniture Repairing</h4>
+                         <p class="card-text" style="color:grey; margin-top:30px;"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"> Rating: 4.8<br>
+                         	
+<img src="80.png" height="18px;"> C 475, Suresh Nagar, City Centre, Gwalior - 474011.
+<br>
+<img src="a1.png" style="height: 18px; width: 18px;"> Carpenters, Sofa Repair, Furniture Repair, Office Furniture Repair & Service.</p>
+   </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="cp3.jpg" alt="Suresh Dasari Card" style="height:260px; width: 100%;">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-family: none;color: teal;">Saki Services</h4>
+                         <p class="card-text" style="color:grey; margin-top:30px;"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"> Rating: 4.9<br>
+                         	
+<img src="80.png" height="18px;">Tansen Nagar, City Centre, Gwalior - 474011, Tansen Nagar, Gandhi Nagar.<br>
+
+<img src="a1.png" style="height: 18px; width: 18px;"> Carpenters, Sofa Set Repair & Service,Furniture Repair, Assembling & Services.</p>
+   </div>
+                </div>
+            </div>
+        </div>
+    <br>
+    <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="cp8.jpg" alt="Suresh Dasari Card" style="height:260px; width: 100%;">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-family: none;color: teal;">Sanjay Sofa Repairing</h4>
+                         <p class="card-text" style="color:grey;margin-top:30px;"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"> Rating: 5.0<br>
+                         	
+<img src="80.png" height="18px;"> Jinsi, No.2, Laskar, Road, Gwalior - 474001, Near Madhav Plaza.<br>
+
+<img src="a1.png" style="height: 18px; width: 18px;"> Sofa Set Repair & Services, Wooden Furniture Repair & Service.</p>
+   </div>
+                </div>
+            </div>
+        </div>
+    <br>
+    <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="cp4.jpg" alt="Suresh Dasari Card" style="height:260px; width: 100%;">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h4 class="card-title"style="font-family: none;color: teal;">Clean Cut EnterPrises</h4>
+                         <p class="card-text" style="color:grey;margin-top:30px;"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"> Rating: 4.8<br>
+                         	
+<img src="80.png" height="18px;"> Sai Baba Mandir, Phool Bagh, Gwalior - 474002.<br>
+
+<img src="a1.png" style="height: 18px; width: 18px;"> Carpenters, Furniture Repair & Services, Interior Designers, Steel Railing Dealers.</p>
+   </div>
+                </div>
+            </div>
+        </div>
+    <br>
+    <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="cp6.jpg" alt="Suresh Dasari Card" style="height:260px; width: 100%;">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h4 class="card-title"style="font-family: none;color: teal;">Upendra Carpenter</h4>
+                         <p class="card-text" style="color:grey;margin-top:30px;"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"> Rating: 4.0<br>
+                         	
+<img src="80.png" height="18px;">Pinto Park Road, Gwalior - 474005, In Front Of Sabji Mandi.<br>
+
+<img src="a1.png" style="height: 18px; width: 18px;"> Carpenters, Sofa Repair, Wooden Furniture Repair, Office Furniture Repair.</p>
+   </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="cp9.jpg" alt="Suresh Dasari Card" style="height:260px; width: 100%;">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h4 class="card-title"style="font-family: none;color: teal;">Rehan Furniture</h4>
+                         <p class="card-text" style="color:grey;margin-top:30px;"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"><img src="40.png" height="13px"> Rating: 4.0<br>
+                         	
+<img src="80.png" height="18px;">Ramaji Pura, Catigate AV Road, Gwalior - 474001, Near Drupat Kendra.<br>
+
+<img src="a1.png" style="height: 18px; width: 18px;"> Carpenters, Sofa Repair,Furniture Repair & Services, Furniture Dealer.</p>
+   </div>
+                </div>
+            </div>
+        </div>
+    
+
+       <br>
+    
+<div class="text-center pt-4">
+  <a style="padding:10px;display:block;" href="http://androidcss.com/css/css3-floating-button-tutorial/" target="_blank"></a>
+
+<!-- Code begins here -->
+
+<a data-toggle="modal" data-target="#loginModal"><button class="float" type="button " style="height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    font-family: cursive;
+    font-size: large;">Place Enquire</button>
+  </a>
+</a>
+</div>
+
+<br>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+
+<div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                  <div class="modal-body">
+        <div class="loginmodal-container">
+                    <h1>Confirmation Form</h1>
+                    <div class="text-center">
+                    <a href="https://www.facebook.com" style="color: blue;" target="_blank"><i class="fa fa-facebook-f px-3"></i></a>
+            <a href="https://twitter.com" target="_blank" style="color: skyblue;"><i class="fa fa-twitter pr-3"></i></a>
+            <a href="#" target="_blank" style="color: red;"><i class="fa fa-google-plus-square pr-3"></i></a>
+                    </div>
+                    
+                    <hr>
+                  <form>
+      
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstName">First Name</label>
+      <input type="text" class="form-control" id="inputFirstName" placeholder="FirstName">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Last Name</label>
+      <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPhone">Phone Number</label>
+      <input type="Phone" class="form-control" id="inputPhone" placeholder="Phone No.">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Service Type</label>
+       <select id="inputState" class="form-control">
+        <option selected>Carpenters</option>
+        <option>Painter</option>
+        <option>Plumber</option>
+        <option>Electrician</option>
+        <option>Carpenter</option>
+        <option>House Cleaning</option>
+        <option>Appliances Service</option>
+      </select>  
+  </div>
+    <div class="form-group col-md-6">
+      <label for="inputPhone">Provider Name</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>Shivhare Furniture Repairing</option>
+        <option>Saki Services</option>
+        <option>Clean Cut EnterPrises</option>
+        <option>Sanjay Sofa Repairing</option>
+        <option>Upendra Carpenter</option>
+         <option>Rehan Furniture</option>
+      </select> 
+       </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        I agree
+      </label>
+    </div>
+  </div>
+  <button type="submit" onclick="myF()" class="btn btn-primary">Submit</button>
+<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Cancel</button> 
+                    
+                     </form>
+                    
+                  </div>
+                        </div>
+                </div>
+        
+                  </div>
+
+        </div>
+        </div>
+    </div>
+
+<!-- <button onclick="myFunction()">Try it</button>
+ -->
+<script>
+function myF() {
+  alert("Your Information Submitted!!!");
+}
+</script>
+<footer>
+  <div class="footer-wrap">
+  <div class="container first_class">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <h3>BE THE FIRST TO KNOW</h3>
+          <p>Get all the latest information on  Triedge Services, Events, Jobs
+            and Fairs. Sign up for our newsletter today.</p>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <form class="newsletter">
+           <input type="text" placeholder="Email Address"> 
+                                                        <button class="newsletter_submit_btn" type="submit"><i class="fa fa-paper-plane"></i></button>  
+        </form>
+        
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <div class="col-md-12">
+          <div class="standard_social_links">
+        <div>
+          <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+
+          </li>
+          <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-whatsapp"><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+          </li>
+        </div>
+      </div>  
+        </div>
+          <div class="clearfix"></div>
+        <div class="col-md-12"><h3 style="text-align: right;">Stay Connected</h3></div>
+        </div>
+      </div>
+  </div>
+    <div class="second_class">
+      <div class="container second_class_bdr">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+
+          <div class="footer-logo" ><img src="lo.png" alt="logo" style="height: 40%;width: 40%;">
+          </div>
+          <p>Your one-stop career platform to find Jobs, Internships, Professional Trainings, Projects, and Volunteering Opportunities.</p>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <h3>Quick  LInks</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a>
+            </li>
+            <li><a href="#">About us</a>
+            </li>
+            <li><a href="#">Triedge Partners</a>
+            </li>
+            <li><a href="#">Contact Us</a>
+            </li>
+            <li><a href="#" target="_blank">Terms &amp; Conditions</a>
+            </li>
+            <li><a href="#" target="_blank">Privacy Policy</a>
+            </li>
+            <li><a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>OUR SERVICES</h3>
+          <ul class="footer-category">
+            <li><a href="#">Fresher Jobs</a>
+            </li>
+            <li><a href="#">InternEdge - Internships &amp; Projects </a>
+            </li>
+            <li><a href="#">Resume Edge - Resume Writing Services</a>
+            </li>
+            <li><a href="#">Readers Galleria - Curated Library</a>
+            </li>
+            <li><a href="#">Trideus - Campus Ambassadors</a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>triedge Events</h3>
+          <ul class="footer-links">
+            <li><a href="#">Triedge Events</a>
+            </li>
+
+            <li><a href="#">Jobs &AMP; Internship Fair 2019</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    
+    <div class="row">
+      
+      <div class="container-fluid">
+      <div class="copyright"> Copyright 2019 | All Rights Reserved by TRIEDGE Solutions Pvt. Ltd.</div>
+      </div>
+      
+    </div>
+  </div>
+  
+  </footer>
+
+<!--footer end-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- Font Awesome 5 links-->
+  <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+</body>
+</html>
